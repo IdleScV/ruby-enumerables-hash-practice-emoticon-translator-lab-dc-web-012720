@@ -13,7 +13,7 @@ def load_library(filepath)
     count = 0
     hash2 = {}
     while count < file.keys.length do
-        hash1[file[file.keys[count]][0]] = hash1[file[file.keys[count]][1]]
+        hash2[file[file.keys[count]][0]] = hash1[file[file.keys[count]][1]]
         count += 1
     end
 

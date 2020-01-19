@@ -1,19 +1,27 @@
 require "yaml"
 
 def load_library(filepath)
-  file = YAML.load_file(filepath)
-  hash = {
-    'get_meaning' => {  
-      japanes emoticons1 => meaning1
-      japanese emoticons2 => meaning2
-    },
-    'get_emoticon' => {
-      english emoticons1 => japanese emoticons1
-      english emoticons2 => japanese emoticons2
+    file = YAML.load_file(filepath)
+
+    count = 0
+    hash1 = {}
+    while count < file.keys.length do
+        hash1[file[file.keys[count]][1]] = file.keys[count]
+    end
+
+    count = 0
+    hash2 = {}
+    while count < file.keys.length do
+        hash1[file[file.keys[count]][0]] = hash1[file[file.keys[count]][1]]
+    end
+
+    hash = {
+      'get_meaning' => (hash1),
+      'get_emoticon' => (hash2)
     }
-  }
-  return hash
-end
+    return hash
+  end
+  
   
 
 

@@ -16,6 +16,7 @@ def get_japanese_emoticon(emot)
         i+= 1
     end
 end
+
 def get_english_meaning(jemot)
   
 end

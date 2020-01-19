@@ -38,11 +38,10 @@ end
 
 def get_english_meaning(filepath, jemot)
     lib = load_library(filepath)
-if lib["get_emoticon"][emot]
-      return lib["get_emoticon"][emot]
-    else
-      return "Sorry, that emoticon was not found"
-    end
-end
-    
+      if lib["get_emoticon"][emot]
+        return lib["get_emoticon"][emot]
+      else
+        return "Sorry, that emoticon was not found"
+      end
+      
 end

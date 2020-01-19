@@ -26,8 +26,8 @@ def load_library(filepath)
   
 
 
-def get_japanese_emoticon(emot)
-    lib = load_library('./data.yml')
+def get_japanese_emoticon(emot, filepath)
+    lib = load_library(filepath)
     return lib["get_emoticon"][emot]
 end
 

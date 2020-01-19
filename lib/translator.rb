@@ -28,7 +28,12 @@ def load_library(filepath)
 
 def get_japanese_emoticon(filepath, emot)
     lib = load_library(filepath)
-    return lib["get_emoticon"][emot]
+    
+    if lib["get_emoticon"][emot]
+      return lib["get_emoticon"][emot]
+    else
+      return "sorry!"
+    end
 end
 
 def get_english_meaning(jemot)
